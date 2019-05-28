@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>理财宝-定期储蓄收益计算器</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+    </head>
+    <style>
+        
+        table{
+         border-collapse:collapse;
+         
+        }
+        td{
+          border:1px silver solid;
+          padding: 3px;
+          font-size:13px;
+        }
+        input{
+          width:100px;
+          font-size:13px;
+        }
+        </style>
+        
+    <script>
+    //函数calc
+    function calc(){
+    var num1= document.getElementById("num1").value;
+    var num2= document.getElementById("num2").value;
+    var num3= document.getElementById("num3").value;
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    num3 = parseFloat(num3);
+    var result1=num1*Math.pow(1+num2*0.01,num3);
+    document.getElementById("result1").value=result1.toFixed(6);  
+    var result2=num1*Math.pow(1+num2*0.01,num3)-num1;
+    document.getElementById("result2").value=result2.toFixed(6);  
+    }
+    </script>
+</head>
+<body>
+    <!-- 表格居中 -->
+  <table align="center">
+    <tr>
+        <td colspan="2" align="center">理财宝-定期储蓄收益计算器</td>
+    </tr>  
+    <tr>
+      <td>本金</td>  
+      <td><input type="text" id="num1">万(人民币)</td>
+    </tr> 
+    <tr>
+      <td>年化收益率</td>  
+      <td><input type="text" id="num2">%</td>
+    </tr>
+    <tr>
+        <td>存款时间</td>  
+        <td><input type="text" id="num3">年</td>
+        </tr>  
+    <tr>
+        <td colspan="2" align="center"><input type="button" value="计算" onclick="calc()"></td>
+    </tr>
+    <tr>
+      <td>本金+利息</td>  
+      <td><input type="text" id="result1">万</td>
+    </tr>
+    <tr>
+        <td>利息</td>  
+        <td><input type="text" id="result2">万</td>
+    </tr> 
+  </table>
+</body>
+</html>
