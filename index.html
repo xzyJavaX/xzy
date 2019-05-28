@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+    </head>
+    <style>
+        table{
+         border-collapse:collapse;
+        }
+        td{
+          border:1px silver solid;
+          padding: 3px;
+          font-size:13px;
+        }
+        input{
+          width:100px;
+          font-size:13px;
+        }
+        </style>
+        
+    <script>
+    //函数calc
+    function calc(){
+    var num1= document.getElementById("num1").value;
+    var num2= document.getElementById("num2").value;
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    var result1 =3.010626-1.003846*(Math.log(num1) / Math.log(Math.E))+0.999525*(Math.log(num2) / Math.log(Math.E));
+    var result=Math.pow(Math.E,result1);
+    document.getElementById("result").value=result;  
+    }
+    </script>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>输液速度</td>  
+      <td><input type="text" id="num1">滴每分钟</td>
+    </tr> 
+    <tr>
+      <td>输液瓶容量</td>  
+      <td><input type="text" id="num2">毫升</td>
+    </tr> 
+    <tr>
+        <td colspan="2" align="center"><input type="button" value="计算" onclick="calc()"></td>
+    </tr>
+    <tr>
+      <td>输液时间</td>  
+      <td><input type="text" id="result">分钟</td>
+    </tr> 
+  </table>
+</body>
+</html>
