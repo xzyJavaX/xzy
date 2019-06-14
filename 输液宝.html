@@ -26,12 +26,13 @@
             background-image: url(timg.jpg);
             /* cover可以覆盖网页 */
             background-size: cover;
-            background: repeat 2;
         }
 
     </style>  
     <script>
     var result=0;
+    //点击事件只触发一次
+    var flag=true;
     //函数calc
     function calc(){
     var num1= document.getElementById("num1").value;
@@ -59,9 +60,13 @@
           }
 
     function daojishi(){
-      timer = setInterval("CountDown()", 1000);
+      if(flag)
+      {
+        timer = setInterval("CountDown()", 1000);
+        flag=false;
+      }
     }
-  
+   
     </script>
   
 </head>
@@ -72,21 +77,21 @@
         </tr> 
     <tr>
       <td>输液速度</td>  
-      <td><input type="text" id="num1">滴每分钟</td>
+      <td><input type="text" id="num1" style="background:rgba(0, 0, 0, 0); ";>滴每分钟</td>
     </tr> 
     <tr>
       <td>输液瓶容量</td>  
-      <td><input type="text" id="num2">毫升</td>
+      <td><input type="text" id="num2" style="background:rgba(0, 0, 0, 0); " >毫升</td>
     </tr> 
     <tr>
-        <td colspan="2" align="center"><input type="button" value="计算" onclick="calc()"></td>
+        <td colspan="2" align="center"><input type="button" value="计算" onclick="calc()" style="background:rgba(0, 0, 0, 0); "></td>
     </tr>
     <tr>
       <td>输液时间</td>  
-      <td><input type="text" id="result">分钟</td>
+      <td><input type="text" id="result" style="background:rgba(0, 0, 0, 0); ">分钟</td>
     </tr>
     <tr>
-      <td colspan="2" align="center"><input type="button" value="开始倒计时" onclick="daojishi()"></td>
+      <td colspan="2" align="center"><input type="button" value="开始倒计时" onclick="daojishi()" style="background:rgba(0, 0, 0, 0); "></td>
   </tr> 
   </table>
   <div id="timer"  align="center"></div>
