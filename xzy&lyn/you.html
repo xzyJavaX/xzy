@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xzy&lyn</title>
+    <script src="js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    
+    <style type="text/css">
+        .class1{
+            background-image: url(img/beijing/1.jpg);
+        }
+        p{
+            margin-left:10px;
+            margin-top:10px;
+        }
+        .margin{
+            margin-right:10px;
+        }
+        /* 图片 */
+        div.item img{
+            width:40%;
+            max-height:800px;
+            margin:0 auto;
+            
+        }
+        /* 轮播图 */
+        div#carousel-example-generic{
+        width:80%;
+        margin:0 auto;
+        }
+        div#carousel-example-generic1{
+        width:80%;
+        margin:0 auto;
+        }
+        div#carousel-example-generic2{
+        width:60%;
+        margin:0 auto;
+        }
+        div#carousel-example-generic3{
+        width:60%;
+        margin:0 auto;
+        }
+        
+        /* 字体颜色和大小 */
+        div#colorful{
+          color:pink;
+        }
+        p.n{
+      font-size:20px;
+        }
+        /* 甜甜圈绝对定位 */
+        div.a{
+position: absolute;
+left: 0px;
+top: 300px;
+}
+div.b{
+position: absolute;
+right: 0px;
+top: 300px;
+}
+    </style>
+
+      <script>
+          function mai1(){
+             alert("爱你呦");
+          }
+          function mai2(){
+             alert("老婆最美啦~");
+          }
+          function mai3(){
+             alert("爱老婆");
+          }
+          function mai4(){
+             alert("老婆最可爱");
+          }
+          function mai5(){
+             alert("老婆永远是我的小宝贝~");
+          }
+     </script>
+</head>
+<body class="class1">
+    <audio src="audio/汪苏泷 - 一笑倾城.mp3"  autoplay ></audio>
+    <ul id="myTab" class="nav nav-tabs">
+       <li class="active">
+            <a href="#sll" data-toggle="tab">
+                <span class="margin">YSL圣罗兰</span><span class="	glyphicon glyphicon-shopping-cart"></span>
+            </a>
+       </li>
+       <li>
+            <a href="#jfx" data-toggle="tab">
+            <span class="margin">Givenchy纪梵希*2</span><span class="	glyphicon glyphicon-shopping-cart"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#mk" data-toggle="tab">
+                <span class="margin">Mac魅可</span><span class="	glyphicon glyphicon-shopping-cart"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#zcx" data-toggle="tab">
+                <span class="margin">ShuUemura植村秀</span><span class="	glyphicon glyphicon-shopping-cart"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#amn" data-toggle="tab">
+                <span class="margin">Armani阿玛尼</span><span class="	glyphicon glyphicon-shopping-cart"></span>
+            </a>
+        </li>
+        <li>
+          <a href="#bg" data-toggle="tab">
+              <span class="margin">不管不管都要买</span><span class="	glyphicon glyphicon-shopping-cart"></span>
+          </a>
+      </li>
+        <li class="dropdown">
+           <a href="#" id="myTabDrop1" class="dropdown-toggle"data-toggle="dropdown">
+                <span class="margin">还有很多没买！</span><span class="	glyphicon glyphicon-shopping-cart"></span>
+              <b class="caret"></b>
+           </a>
+           <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+              <li><a  href="#storm"  tabindex="-1" data-toggle="tab"><span class="margin">爱心发射biubiubiu~</span><span class="	glyphicon glyphicon-heart"></span></a></li>
+              <li><a  onclick="mai1()"  tabindex="-1" data-toggle="tab"><span class="margin">Dior迪奥</span><span class="	glyphicon glyphicon-shopping-cart"></span></a></li>
+              <li><a  onclick="mai2()"  tabindex="-1" data-toggle="tab"><span class="margin">CHANEL香奈儿</span><span class="	glyphicon glyphicon-shopping-cart"></span></a></li>
+              <li><a  onclick="mai3()"  tabindex="-1" data-toggle="tab"><span class="margin">Estee Lauder雅诗兰黛</span><span class="	glyphicon glyphicon-shopping-cart"></span></a></li>
+              <li><a  onclick="mai4()"  tabindex="-1" data-toggle="tab"><span class="margin">LANCOME兰蔻</span><span class="	glyphicon glyphicon-shopping-cart"></span></a></li>
+              <li><a  onclick="mai5()"  tabindex="-1" data-toggle="tab"><span class="margin">TF汤姆福特</span><span class="	glyphicon glyphicon-shopping-cart"></span></a></li>
+              
+           </ul>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="sll">
+            <div id="colorful"> <p class="n">听说，男生和女生的恋爱是这样的</p></div>
+            <div style="width:850px;margin:0px auto">
+                <canvas id="Chart1"  ></canvas>
+            </div>
+            <div id="colorful"> <p class="n">可是，我们的恋爱是这样的</p></div>
+            <div style="width:850px;margin:0px auto">
+                    <canvas id="Chart2" ></canvas>
+            </div>
+        </div>
+
+       <div class="tab-pane fade" id="jfx">
+        <div id="colorful"> <p class="n">感谢命运的眷顾，让我们相遇。我的世界全是你，你的世界全是我</p></div>
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="img/lunbo1/1.png" >
+              </div>
+              <div class="item">
+                      <img src="img/lunbo1/2.png" >
+              </div>
+              <div class="item">
+                      <img src="img/lunbo1/3.png" >
+              </div>
+        
+              <div class="item">
+                      <img src="img/lunbo1/4.png" >
+              </div>
+              <div class="item">
+                      <img src="img/lunbo1/5.png" >
+              </div>
+              <div class="item">
+                    <img src="img/lunbo1/6.png" >
+              </div>
+              <div class="item">
+                    <img src="img/lunbo1/7.png" >
+              </div>
+            </div>
+        
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+            </div>
+       </div>
+       
+       <div class="tab-pane fade" id="mk">
+          <div id="colorful"> <p class="n">最美的你，早已住进我的心，你永远都是我的小宝宝~</p></div>
+           <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel" data-interval="2000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic1" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic1" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic1" data-slide-to="2"></li>
+                  <li data-target="#carousel-example-generic1" data-slide-to="3"></li>
+                  <li data-target="#carousel-example-generic1" data-slide-to="4"></li>
+                  <li data-target="#carousel-example-generic1" data-slide-to="5"></li>
+                  <li data-target="#carousel-example-generic1" data-slide-to="6"></li>
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="img/lunbo2/1.png" >
+                  </div>
+                  <div class="item">
+                          <img src="img/lunbo2/2.png" >
+                  </div>
+                  <div class="item">
+                          <img src="img/lunbo2/3.png" >
+                  </div>
+            
+                  <div class="item">
+                          <img src="img/lunbo2/4.png" >
+                  </div>
+                  <div class="item">
+                          <img src="img/lunbo2/5.png" >
+                  </div>
+                  <div class="item">
+                       <img src="img/lunbo2/6.png" >
+                  </div>
+                  <div class="item">
+                        <img src="img/lunbo2/7.png" >
+                  </div>
+                </div>
+            
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+                </div>
+       </div>
+
+       <div class="tab-pane fade" id="zcx">
+        <div id="colorful"> <p class="n">记录下每个你最脆弱最需要我的瞬间，我一定会守护在你身边，陪伴你，照顾你，直到永远</p></div>                     
+           <table class="table table-hover">
+                    <thead>
+                     <th>年</th>
+                     <th>月</th>
+                     <th>日</th>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>2018年</td> 
+                        <td>10月</td> 
+                        <td >21日</td> 
+                     </tr>
+                     <tr>
+                        <td>2018年</td> 
+                        <td>11月</td> 
+                        <td >18日</td> 
+                     </tr>
+                     <tr>
+                        <td>2018年</td> 
+                        <td>12月</td> 
+                        <td >20日</td> 
+                     </tr>
+                     <tr>
+                        <td>2019年</td> 
+                        <td>1月</td> 
+                        <td >17日</td> 
+                     </tr>
+                     <tr>
+                        <td>2019年</td> 
+                        <td>2月</td> 
+                        <td >19日</td> 
+                     </tr>
+                     <tr>
+                        <td>2019年</td> 
+                        <td>3月</td> 
+                        <td >20日</td> 
+                     </tr>
+                     <tr>
+                        <td>2019年</td> 
+                        <td>4月</td> 
+                        <td >21日</td> 
+                     </tr>
+                     <tr>
+                        <td>2019年</td> 
+                        <td>5月</td> 
+                        <td >23日</td> 
+                     </tr>
+                     <tr>
+                        <td>2019年</td> 
+                        <td>6月</td> 
+                        <td >20日</td> 
+                     </tr>             
+                     <tr>
+                        <td>2019年</td> 
+                        <td>7月</td> 
+                        <td >16日</td> 
+                     </tr>
+                     <tr>
+                        <td>2019年</td> 
+                        <td>8月</td> 
+                        <td >19日</td> 
+                     </tr>
+                  </tbody>
+                </table>
+
+       </div>
+       
+       
+       <div class="tab-pane fade" id="amn">
+          <div id="colorful"> <p class="n">左是我，右是你。做你的购物车和银行卡，你只管买买买。等我们死了，就把我们的骨灰混在一起，装进你用完的口红里，然后再把所有口红放到一个口红盒子里，下辈子你一定是个口红精</p></div>
+          <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel" data-interval="2000">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                 <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+                 <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+                 <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+                 <li data-target="#carousel-example-generic2" data-slide-to="3"></li>
+                 <li data-target="#carousel-example-generic2" data-slide-to="4"></li>
+                 <li data-target="#carousel-example-generic2" data-slide-to="5"></li>
+                 <li data-target="#carousel-example-generic2" data-slide-to="6"></li>
+               </ol>
+           
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner" role="listbox">
+                 <div class="item active">
+                   <img src="img/lunbo3/1.jpg" >
+                 </div>
+                 <div class="item">
+                         <img src="img/lunbo3/2.jpg" >
+                 </div>
+                 <div class="item">
+                         <img src="img/lunbo3/3.jpg" >
+                 </div>
+           
+                 <div class="item">
+                         <img src="img/lunbo3/4.jpg" >
+                 </div>
+                 <div class="item">
+                         <img src="img/lunbo3/5.jpg" >
+                 </div>
+                 <div class="item">
+                      <img src="img/lunbo3/6.jpg" >
+                 </div>
+                 <div class="item">
+                       <img src="img/lunbo3/7.jpg" >
+                 </div>
+               </div>
+           
+               <!-- Controls -->
+               <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+           
+               </a>
+               <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+               </a>
+          </div>
+          <div style="width:400px;" class="a">
+                  <canvas id="myChart3" ></canvas>
+          </div>
+          <div style="width:400px;" class="b">
+                  <canvas id="myChart4" ></canvas>
+          </div>
+       </div>
+
+
+       <div class="tab-pane fade" id="bg">
+        <div id="colorful"> <p class="n">记录下我们在一起的时光~从你嘴里喊出的老公是我这辈子听过的最美的情话，你给老公做的爱心甜点是我这辈子吃过的最好吃的东西</p></div>
+          <div id="carousel-example-generic3" class="carousel slide" data-ride="carousel" data-interval="2000">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                 <li data-target="#carousel-example-generic3" data-slide-to="0" class="active"></li>
+                 <li data-target="#carousel-example-generic3" data-slide-to="1"></li>
+                 <li data-target="#carousel-example-generic3" data-slide-to="2"></li>
+                 <li data-target="#carousel-example-generic3" data-slide-to="3"></li>
+                 <li data-target="#carousel-example-generic3" data-slide-to="4"></li>
+                 <li data-target="#carousel-example-generic3" data-slide-to="5"></li>
+                 <li data-target="#carousel-example-generic3" data-slide-to="6"></li>
+               </ol>
+           
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner" role="listbox">
+                 <div class="item active">
+                   <img src="img/lunbo4/1.jpg" >
+                 </div>
+                 <div class="item">
+                         <img src="img/lunbo4/2.jpg" >
+                 </div>
+                 <div class="item">
+                         <img src="img/lunbo4/3.jpg" >
+                 </div>
+           
+                 <div class="item">
+                         <img src="img/lunbo4/4.jpg" >
+                 </div>
+                 <div class="item">
+                         <img src="img/lunbo4/5.jpg" >
+                 </div>
+                 <div class="item">
+                      <img src="img/lunbo4/6.jpg" >
+                 </div>
+                 <div class="item">
+                       <img src="img/lunbo4/7.jpg" >
+                 </div>
+               </div>
+           
+               <!-- Controls -->
+               <a class="left carousel-control" href="#carousel-example-generic3" role="button" data-slide="prev">
+                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+           
+               </a>
+               <a class="right carousel-control" href="#carousel-example-generic3" role="button" data-slide="next">
+                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+               </a>
+          </div>
+       </div>
+
+
+       <div class="tab-pane fade" id="storm">
+        <div style="text-align:center;clear:both">
+          <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+          <script src="/follow.js" type="text/javascript"></script>
+          </div>
+          
+               <iframe frameborder="0" scrolling="no" src="index2.html" width="100%" height="800px"  ></iframe>
+           </div>
+
+
+    </div>
+     
+    <div style="height:200px"></div>
+    <script>
+            var ctx = document.getElementById('Chart1').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                 data: {
+                    labels: ['第一个月', '第二个月', '第三个月', '第四个月', '第五个月', '第六个月','第七个月', '第八个月', '第九个月', '第十个月', '第十一个月', '一年'],
+                    datasets: [
+                   {
+                        label: '男生',
+                        data: [95, 94, 93, 85,75,63,49,33,25,24,24,23],
+                        borderColor:'blue',
+                        backgroundColor:'skyBlue',
+                        borderWidth: 1,
+                        fill: false,
+             
+                    },
+                   {
+                        label: '女生',
+                        data: [65,85 ,73 , 89,77,91,83,94,90,100,93,100],
+                        borderColor:'red',
+                        backgroundColor:'pink',
+                        borderWidth: 1,
+                        fill: false,
+                    },
+              
+            ]
+                },
+            options: {
+                    tooltips: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    scales: {
+                    yAxes: [{
+                        ticks: {
+                        beginAtZero:true
+                    }
+                    }]
+                  }
+             }
+            });
+            var ctx = document.getElementById('Chart2').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['第一个月', '第二个月', '第三个月', '第四个月', '第五个月', '第六个月','第七个月', '第八个月', '第九个月', '第十个月', '第十一个月', '一年'],
+                    datasets: [
+                   {
+                        label: '我',
+                        data: [95, 96, 97, 98,98,99,99,100,100,100,100,100],
+                        borderColor:'blue',
+                        backgroundColor:'skyBlue',
+                        borderWidth: 1,
+                        fill: false,
+             
+                    },
+                   {
+                        label: '你',
+                        data: [65,93 ,83 , 98,87,99,94,100,95,100,98,100],
+                        borderColor:'red',
+                        backgroundColor:'pink',
+                        borderWidth: 1,
+                        fill: false,
+                    },
+            
+              
+            ]
+                },
+          
+            options: {
+                    tooltips: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    scales: {
+                    yAxes: [{
+                        ticks: {
+                        beginAtZero:true
+                    }
+                    }]
+                  }
+             }
+            });
+            var ctx = document.getElementById('myChart3').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['爱你', '赚钱', '学习'],
+        datasets: [{
+            label: '我',
+            data: [51,25,24],
+            borderColor:'lightGray',
+            backgroundColor:['pink','skyblue','LightYellow'],
+            borderWidth: 1
+        }]
+    }
+});
+
+var ctx = document.getElementById('myChart4').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['爱我', '口红', '衣服','包包','手链','耳环','戒指','项链'],
+        datasets: [{
+            label: '你',
+            data: [51,10,9,8,6,6,5,5],
+            borderColor:'lightGray',
+            backgroundColor:['pink','#F00','#F60','#FF0','#0C0','#699','#06C','#909'],
+            borderWidth: 1
+        }]
+    }
+});
+            
+    </script>
+</body>
+</html>

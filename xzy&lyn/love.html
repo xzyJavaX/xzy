@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+        .class1{
+            background-image: url(img/beijing/1.jpg);
+        }
+        div#colorful{
+          color:red;
+        }
+    </style>
+    <style>
+        p.b{
+        position: absolute;
+        left:50%;
+        bottom: 50px;
+        
+        }
+        p.a{
+        position: absolute;
+        left:50%;
+        bottom: 170px;
+        font-size:20px;
+        }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    
+</head>
+<body class="class1">
+    
+    <audio src="audio/杨洋 - 微微一笑很倾城.mp3"  autoplay ></audio>
+    <div id="mainDiv">
+        <div id="content">
+            
+            
+            <div id="code">
+                /**
+                <br>
+                2018—10-07
+                <br>
+                */
+                <br>
+                Boy name =  Mr XIONG
+                <br>
+                Girl name = Mrs LAI
+                <br>
+                <br>
+                We are all first love for each other
+                <br>
+                <br>
+                How lucky to meet you
+                <br>
+                <br>
+                Thank you for giving me your life
+                <br>
+                <br>
+                Whatever happens in the future
+                <br>
+                <br>
+                We all have to be together all the time
+                <br>
+                <br>
+                You are the source of my happiness
+                <br>
+                <br>
+                You are my way forward
+                <br>
+                <br>
+                You are the meaning of my existence
+                <br>
+                <br>
+                You are the whole of my future
+                <br>
+                <br>
+                I love you three thousand
+
+
+
+               
+                
+                
+            </div>
+            
+            <div id="colorful"><p class="a">小仙女点这里</p></div>
+            <a href="you.html"><p class="b" ><img src="img/2.png" ></p></a>
+
+
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        亲爱的，我们已经相恋这么久了:
+                        <div id="elapseClock"></div>
+                    </div>
+                
+                    <div id="loveu">
+                        赖赖，20岁生日快乐<br/>
+                        <div class="signature">你永远是我的小宝宝</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        //设置在一起的时间0
+        var together = new Date();
+        together.setFullYear(2018, 10, 07);
+        together.setHours(0);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+        
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                startHeartAnimation();
+            }, 1007);
+        
+            timeElapse(together);
+            setInterval(function () {
+                timeElapse(together);
+            }, 1007);
+        
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
+</html>
